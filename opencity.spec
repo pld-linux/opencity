@@ -3,7 +3,7 @@
 %bcond_without	SDL_mixer	# build without SDL_mixer
 #
 Summary:	A 3D city simulator
-Summary(pl):	Trójwymiarowy symulator miasta
+Summary(pl.UTF-8):   TrÃ³jwymiarowy symulator miasta
 Name:		opencity
 Version:	0.0.4
 Release:	1
@@ -28,10 +28,10 @@ OpenCity is a 3D city simulator game project written in standard C++
 with OpenGL and SDL. It is not intended to be a clone of any famous
 city simulator from Max*s.
 
-%description -l pl
-OpenCity jest trójwymiarowym symulatorem miasta napisanym w
-standardowym C++ z obs³ug± OpenGL i SDL. Projekt nie jest klonem
-¿adnego z popularnych symulatorów miast firmy Max*s.
+%description -l pl.UTF-8
+OpenCity jest trÃ³jwymiarowym symulatorem miasta napisanym w
+standardowym C++ z obsÅ‚ugÄ… OpenGL i SDL. Projekt nie jest klonem
+Å¼adnego z popularnych symulatorÃ³w miast firmy Max*s.
 
 %prep
 %setup -q -n %{name}-%{version}stable
