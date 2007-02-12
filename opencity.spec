@@ -3,7 +3,7 @@
 %bcond_without	SDL_mixer	# build without SDL_mixer
 #
 Summary:	A 3D city simulator
-Summary(pl.UTF-8):   Trójwymiarowy symulator miasta
+Summary(pl.UTF-8):	Trójwymiarowy symulator miasta
 Name:		opencity
 Version:	0.0.4
 Release:	1
