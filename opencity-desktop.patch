@@ -1,24 +1,20 @@
---- opencity-0.0.4stable/OpenCity.desktop~	2006-10-29 16:41:48.000000000 +0100
-+++ opencity-0.0.4stable/OpenCity.desktop	2006-10-29 16:41:24.000000000 +0100
-@@ -1,13 +1,17 @@
- [Desktop Entry]
--Categories=Game
-+Categories=Game;Simulation;
- Comment=A 3D city simulator
- Comment[fr]=Jeu de simulation de Ville en OpenGL
-+Comment[pl]=Trójwymiarowy symulator miasta
+--- opencity-0.0.5beta/opencity.desktop~	2007-12-08 15:24:40.000000000 +0100
++++ opencity-0.0.5beta/opencity.desktop	2007-12-08 15:24:39.000000000 +0100
+@@ -3,10 +3,14 @@
  Encoding=UTF-8
+ Comment=A 3D city simulator
+ Comment[fr]=Jeu de simulation de Ville en 3D
+-Categories=Game;StrategyGame;
++Comment[pl]=Trójwymiarowy symulator miasta
++Categories=Game;Simulation;
  Exec=opencity
  GenericName=City simulator
  GenericName[fr]=Simulateur de ville
--Icon=OpenCity
 +GenericName[pl]=Symulator miasta
-+Icon=opencity.png
- Name=OpenCity
- Name[fr]=OpenCity
-+Name[pl]=OpenCity
+ Icon=opencity.png
  Terminal=false
 -Type=Application
 \ Brak znaku nowej linii na ko�cu pliku
 +Type=Application
 +# vi: encoding=utf-8
++
