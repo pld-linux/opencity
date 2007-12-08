@@ -42,6 +42,7 @@ standardowym C++ z obsługą OpenGL i SDL. Projekt nie jest klonem
 %patch2 -p1
 
 %build
+rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
