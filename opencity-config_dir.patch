@@ -1,11 +1,11 @@
---- opencity-0.0.5beta/src/main.cpp~	2007-12-08 17:28:08.000000000 +0100
-+++ opencity-0.0.5beta/src/main.cpp	2007-12-08 17:28:03.000000000 +0100
+--- opencity-0.0.5stable/src/main.cpp~	2007-12-01 16:25:06.000000000 +0100
++++ opencity-0.0.5stable/src/main.cpp	2008-01-01 15:51:26.000000000 +0100
 @@ -132,9 +132,9 @@
  	static int flags			= 0;
  
  /// The paths are static so that the others can not access this
--	static string sHomeDir		= "";
-+	static string sHomeDir		= "/usr/share/opencity/";
+-	static string sDataDir		= "";
++	static string sDataDir		= "/usr/share/opencity/";
  	static string sSaveDir		= "";
 -	static string sConfigDir	= "";
 +	static string sConfigDir	= "/usr/share/opencity/";
