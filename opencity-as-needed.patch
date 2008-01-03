@@ -5,15 +5,16 @@
  
  CXXFLAGS="$SDL_CFLAGS"
 -LDFLAGS="$LDFLAGS $SDL_LIBS"
-+LDFLAGS="$LDFLAGS"
++LIBS="$LIBS $SDL_LIBS"
  
  AC_PROG_CXX
  AC_LANG_CPLUSPLUS
-@@ -62,7 +62,6 @@
+@@ -62,7 +62,7 @@
  
          if test "x$SDL_mixer_h" = "xyes"; then
                  if test "x$SDL_mixer_lib" = "xyes"; then
 -                        LDFLAGS="$LDFLAGS -lSDL_mixer"
++                        LIBS="$LIBS -lSDL_mixer"
                          AC_DEFINE(AUDIO_SDL, 1, [SDL_Mixer support])
                          AC_MSG_RESULT(yes)
                  else
