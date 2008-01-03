@@ -22,7 +22,7 @@ Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-as-needed.patch
 URL:		http://www.opencity.info/
 BuildRequires:	OpenGL-GLU-devel
-BuildRequires:	SDL-devel
+BuildRequires:	SDL-devel >= 1.2.9
 BuildRequires:	SDL_image-devel
 %{?with_SDL_mixer:BuildRequires:	SDL_mixer-devel}
 BuildRequires:	SDL_net-devel
