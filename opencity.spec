@@ -1,6 +1,9 @@
 #
-# TODO
-# - --disable-sdl-mixer option seems not working properly
+# TODO:
+# - unpackaged files:
+#    /etc/opencity/config/graphism.conf
+#    /etc/opencity/config/graphism.xml
+#    /etc/opencity/config/opencity.xml
 #
 # Conditional build:
 %bcond_without	SDL_mixer	# build without SDL_mixer
@@ -44,14 +47,13 @@ standardowym C++ z obsługą OpenGL i SDL. Projekt nie jest klonem
 %patch2 -p1
 
 %build
-rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
 %configure \
-	%{?without_SDL_mixer: --disable-sdl-mixer} \
-	LIBS="%{?with_SDL_mixer: -lSDL_mixer}"
+	%{!?with_SDL_mixer:--disable-sdl-mixer}
+
 %{__make}
 
 %install
@@ -71,8 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README TODO docs/*.txt
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/opencity
 %{_datadir}/%{name}
 %{_desktopdir}/%{name}.desktop
-%{_mandir}/man6/*
 %{_pixmapsdir}/%{name}.png
+%{_mandir}/man6/opencity.6*
