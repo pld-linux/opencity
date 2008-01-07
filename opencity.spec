@@ -11,12 +11,12 @@
 Summary:	A 3D city simulator
 Summary(pl.UTF-8):	Trójwymiarowy symulator miasta
 Name:		opencity
-Version:	0.0.5
+Version:	0.0.5.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
 Source0:	http://dl.sourceforge.net/opencity/%{name}-%{version}stable.tar.bz2
-# Source0-md5:	73695c868c1de982f0712457c290f309
+# Source0-md5:	7cfd14d857af6aaff7210f7d00198d38
 Patch0:		%{name}-config_dir.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-as-needed.patch
@@ -41,7 +41,7 @@ standardowym C++ z obsługą OpenGL i SDL. Projekt nie jest klonem
 żadnego z popularnych symulatorów miast firmy Max*s.
 
 %prep
-%setup -q -n %{name}-%{version}stable
+%setup -q -n %{name}-0.0.5stable
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
