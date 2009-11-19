@@ -29,6 +29,7 @@ BuildRequires:	SDL_net-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libpng-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
