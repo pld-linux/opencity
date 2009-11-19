@@ -1,20 +1,20 @@
---- opencity-0.0.5beta/configure.ac~	2007-12-08 16:54:13.000000000 +0100
-+++ opencity-0.0.5beta/configure.ac	2007-12-08 16:54:09.000000000 +0100
-@@ -40,7 +40,7 @@
+--- opencity-0.0.6.2stable/configure.ac~	2009-10-22 21:00:46.000000000 +0200
++++ opencity-0.0.6.2stable/configure.ac	2009-11-18 18:20:24.000000000 +0100
+@@ -48,7 +48,7 @@
  dnl Set CXXFLAGS to disable -g -O2 and support the SDL libraries check
  
  CXXFLAGS="$SDL_CFLAGS"
 -LDFLAGS="$LDFLAGS $SDL_LIBS"
-+LIBS="$LIBS $SDL_LIBS"
++LDIBS="$LIBS $SDL_LIBS"
  
  AC_PROG_CXX
  AC_LANG_CPLUSPLUS
-@@ -62,7 +62,7 @@
+@@ -70,7 +70,7 @@
  
          if test "x$SDL_mixer_h" = "xyes"; then
                  if test "x$SDL_mixer_lib" = "xyes"; then
 -                        LDFLAGS="$LDFLAGS -lSDL_mixer"
-+                        LIBS="$LIBS -lSDL_mixer"
-                         AC_DEFINE(AUDIO_SDL, 1, [SDL_Mixer support])
++                        LIBS="$LIBS -lSDL_mixer -lpng"
+                         AC_DEFINE(OPENCITY_SDL_MIXER, 1, [SDL_Mixer support])
                          AC_MSG_RESULT(yes)
                  else
