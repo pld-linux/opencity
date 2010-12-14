@@ -5,16 +5,7 @@
  
  CXXFLAGS="$SDL_CFLAGS"
 -LDFLAGS="$LDFLAGS $SDL_LIBS"
-+LDIBS="$LIBS $SDL_LIBS"
++LIBS="$LIBS $SDL_LIBS -lSDL_mixer -lpng"
  
  AC_PROG_CXX
  AC_LANG_CPLUSPLUS
-@@ -70,7 +70,7 @@
- 
-         if test "x$SDL_mixer_h" = "xyes"; then
-                 if test "x$SDL_mixer_lib" = "xyes"; then
--                        LDFLAGS="$LDFLAGS -lSDL_mixer"
-+                        LIBS="$LIBS -lSDL_mixer -lpng"
-                         AC_DEFINE(OPENCITY_SDL_MIXER, 1, [SDL_Mixer support])
-                         AC_MSG_RESULT(yes)
-                 else

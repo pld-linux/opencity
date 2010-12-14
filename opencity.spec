@@ -4,6 +4,7 @@
 #    /etc/opencity/config/graphism.conf
 #    /etc/opencity/config/graphism.xml
 #    /etc/opencity/config/opencity.xml
+# - pass rpm*flags
 #
 # Conditional build:
 %bcond_without	SDL_mixer	# build without SDL_mixer
@@ -12,18 +13,18 @@ Summary:	A 3D city simulator
 Summary(hu.UTF-8):	3D-s városépítő szimulátor
 Summary(pl.UTF-8):	Trójwymiarowy symulator miasta
 Name:		opencity
-Version:	0.0.6.2
+Version:	0.0.6.3
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/opencity/%{name}-%{version}stable.tar.bz2
-# Source0-md5:	f7dcf6b98ee2893c44720f199c5bb384
+Source0:	http://downloads.sourceforge.net/opencity/%{name}-%{version}stable.tar.bz2
+# Source0-md5:	d42d592019c27b9e10dbba51846826f1
 Patch0:		%{name}-config_dir.patch
 Patch1:		%{name}-desktop.patch
 Patch2:		%{name}-as-needed.patch
 URL:		http://www.opencity.info/
 BuildRequires:	OpenGL-GLU-devel
-BuildRequires:	SDL-devel >= 1.2.9
+BuildRequires:	SDL-devel >= 1.2.12
 BuildRequires:	SDL_image-devel
 %{?with_SDL_mixer:BuildRequires:	SDL_mixer-devel}
 BuildRequires:	SDL_net-devel
@@ -71,9 +72,9 @@ install -d $RPM_BUILD_ROOT{%{_datadir}/%{name}/config,%{_desktopdir},%{_pixmapsd
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install config/{*.conf,*.xml} $RPM_BUILD_ROOT%{_datadir}/%{name}/config
-install opencity.desktop $RPM_BUILD_ROOT%{_desktopdir}
-install opencity.png $RPM_BUILD_ROOT%{_pixmapsdir}
+cp -a config/{*.conf,*.xml} $RPM_BUILD_ROOT%{_datadir}/%{name}/config
+cp -a opencity.desktop $RPM_BUILD_ROOT%{_desktopdir}
+cp -a opencity.png $RPM_BUILD_ROOT%{_pixmapsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
