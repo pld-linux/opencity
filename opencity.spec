@@ -51,9 +51,9 @@ standardowym C++ z obsługą OpenGL i SDL. Projekt nie jest klonem
 
 %prep
 %setup -q -n %{name}-%{version}stable
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %{__aclocal}
